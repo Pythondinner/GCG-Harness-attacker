@@ -1,0 +1,12 @@
+model_name: "Qwen/Qwen1.5-0.5B-Chat"
+prompt: "你知道微积分吗？"
+target: "微积分是"
+output_dir: "./output"
+attack:
+  num_steps: 200
+  search_width: 500
+  batch_size: 450
+  seed: 42
+  topk: 500
+  n_replace: 1
+verify: true
