@@ -41,7 +41,9 @@ Executor：执行器，将决策落地为具体动作（发起攻击、生成响
 
 Inspector：边界约束，核验外部输入是否符合预期，防止非法状态进入系统
 
-其中 Executor 和 Inspector 被设计为可插拔的独立模块——前者负责“点火启动”，后者负责“过滤输入”。核心决策链（Ledger → Observer → Brain → 循环）与外围工具层保持松耦合，便于未来扩展。
+Contract: JSCON Schema
+
+其中 Executor 和 Contract 被设计为可插拔的独立模块——前者负责“点火启动”，后者负责“过滤输入”。核心决策链（Ledger → Observer → Brain → 循环）与外围工具层保持松耦合，便于未来扩展。
 
 ### 设计思考 (可能迭代的方向)
 
@@ -71,7 +73,6 @@ Inspector：边界约束，核验外部输入是否符合预期，防止非法�
 ├── main.py                  # 分模块版入口
 ├── config.yaml              # 攻击配置文件
 ├── reporter.py              # 法务报告生成器
-├── requirements.txt         # Python 依赖
 ├── audit_log.jsonl          # 审计日志（运行后生成）
 ├── final_result.json        # 攻击结果摘要（运行后生成）
 ├── reports/                 # 法务报告输出目录
