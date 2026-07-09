@@ -86,7 +86,7 @@ def generate_response(text, tokenizer, model):
     return response
 
 
-# ==================== 模块1：executor ====================
+# ==================== executor ====================
 class LocalExecutor:
     def execute(self, config: dict, tokenizer, model):
         model_name = config["model_name"]
@@ -126,7 +126,7 @@ class LocalExecutor:
             }
 
 
-# ==================== 模块2：ledger ====================
+# ==================== ledger ====================
 import copy
 
 class MemoryLedger:
@@ -174,7 +174,7 @@ class MemoryLedger:
         }
 
 
-# ==================== 模块3：observer ====================
+# ==================== observer ====================
 def calculate_fluctuation(loss_history: list) -> str:
     if len(loss_history) < 3:
         return "insufficient"
@@ -207,7 +207,7 @@ class ResultObserver:
         }
 
 
-# ==================== 模块4：brain ====================
+# ==================== brain ====================
 import random
 import os
 from openai import OpenAI
@@ -312,7 +312,7 @@ class DecisionBrain:
         raise RuntimeError("外部模型连续返回非法参数，已放弃")
 
 
-# ==================== 插件1：contract ====================
+# ==================== contract ====================
 class GCGContract:
     @staticmethod
     def get_schema() -> dict:
@@ -328,7 +328,7 @@ class GCGContract:
         return ["num_steps", "search_width", "batch_size"]
 
 
-# ==================== 插件2：inspector ====================
+# ==================== inspector ====================
 class SignalInspector:
     @staticmethod
     def get_schema() -> dict:
@@ -354,7 +354,7 @@ class SignalInspector:
         return True, "核验通过"
 
 
-# ==================== 主程序 main ====================
+# ==================== main ====================
 import yaml
 from datetime import datetime
 
