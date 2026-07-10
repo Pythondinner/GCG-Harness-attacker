@@ -72,6 +72,7 @@ Contract: JSON Schema
 ├── harness_demo.py          # 完整代码（单文件版，可直接运行）
 ├── main.py                  # 分模块版入口
 ├── config.yaml              # 攻击配置文件
+├── gcg_attack.py            # GCG脚本
 ├── reporter.py              # 法务报告生成器
 ├── audit_log.jsonl          # 审计日志（运行后生成）
 ├── final_result.json        # 攻击结果摘要（运行后生成）
